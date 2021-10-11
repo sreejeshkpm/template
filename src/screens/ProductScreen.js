@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { detailsProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-
-import { Link } from 'react-router-dom';
 import Rating from '../components/Rating';
+
 
 export default function ProductScreen(props) {
   const dispatch = useDispatch();
@@ -20,9 +20,10 @@ export default function ProductScreen(props) {
   const addToCartHandler = () => {
     props.history.push(`/cart/${productId}?qty=${qty}`);
   };
+
   return (
     <div>
-       {loading ? (
+      {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
         <MessageBox variant="danger">{error}</MessageBox>
@@ -48,7 +49,7 @@ export default function ProductScreen(props) {
                     numReviews={product.numReviews}
                   ></Rating>
                 </li>
-                <li>Price : Rs.{product.price}</li>
+                <li>Pirce : Rs.{product.price}</li>
                 <li>
                   Description:
                   <p>{product.description}</p>
@@ -108,11 +109,11 @@ export default function ProductScreen(props) {
                     </>
                   )}
                 </ul>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
-)}
-</div>
   );
 }
