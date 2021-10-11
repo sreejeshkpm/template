@@ -1,0 +1,41 @@
+{
+  "name": "template",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreejeshkpm/template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sreejeshkpm/click2shop/issues"
+  },
+  "homepage": "https://github.com/sreejeshkpm/click2shop-app#readme",
+  "dependencies": {
+    "@material-ui/icons": "^4.11.2",
+    "bcryptjs": "^2.4.3",
+    "date-fns": "^2.25.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.1",
+    "process": "^0.11.10",
+    "react-date-range": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-plugin-react": "^7.24.0",
+    "nodemon": "^2.0.13"
+  },
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
+  },
+  "description": ""
+}
